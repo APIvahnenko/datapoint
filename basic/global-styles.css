@@ -1,0 +1,416 @@
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: steelblue;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+:root {
+	--base: floralwhite;
+	--text: #26334f;
+	--highlight: #46A7FB; /*steelblue */
+	--highlight-select: gold;
+	--highlight-text: midnightblue;
+  }
+
+/* @media (prefers-color-scheme: dark) {
+	:root{
+		--base: #26334f;
+		--text: floralwhite;
+	}
+} */
+
+/*system elements to dark/light prefered mode*/
+html{ 
+	color-scheme: dark light;
+}
+
+body>* {
+	box-sizing: border-box;
+}
+ 
+body {
+	margin: 0;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: clamp(0.95rem, 0.6522rem + 1.391vw, 1.3rem);
+	line-height: 1.5;
+	background-color: var(--base);
+	color: var(--text);
+}
+
+h1{
+	font-size: 4em; 
+}
+
+h2{
+	font-size: 2em; 
+}
+
+p {
+	padding: 0.5em 0;
+}
+
+::-moz-selection { /* for Firefox */
+	background: var(--highlight-select);
+	color: var(--highlight-text);
+  }
+
+::selection {
+	background: var(--highlight-select);
+	color: var(--highlight-text); 
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	color: var(--text);
+	cursor: pointer;
+	padding: 2px;
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+	color: var(--highlight);
+}
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+/* ------- light/dark mode ------- */
+
+.switch{
+	z-index: 1;
+}
+
+#modecheckbox{
+	display: none;
+	/* border-radius: 3px; */
+}
+
+label {
+	position: fixed;
+	padding: 0.5em;
+	bottom: 0;
+	right: 0;
+	background-color: var(--base);
+	border-radius: 10px;
+}
+
+body:has(#modecheckbox:checked){
+	--base: #26334f;
+	--text: floralwhite;
+}
+
+.light-switch{
+	display: none;
+}
+
+#modecheckbox:checked ~ .dark-switch{
+	display: none;
+}
+
+#modecheckbox:checked ~ .light-switch{
+	display: block;
+}
+
+/* ----- navigation ----- */
+/* 
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5%;
+	height: 100px;
+}
+
+#home {
+	justify-content: flex-end;
+}
+  
+nav li {
+	list-style-type: none;
+	float: left;
+	padding: 0 15px;
+ }
+  
+nav li a {
+	display: block;
+	color: var(--highlight);
+	text-decoration: none;
+}
+  
+nav li a:hover,
+nav li .active {
+	text-decoration: underline 2px;
+	color: var(--dark-highlight);
+} */
+
+/* ------- intro ------- */
+
+.masthead{
+	margin: 3em;
+	font-size: 75%;
+}
+
+.intro {
+	margin: 3em;
+}
+
+/* ------- stories ------- */
+
+.blog h2{
+	margin: 1em;
+}
+
+.posts{
+	list-style-type: none;
+	padding: 0 2em;
+	display:grid;
+	grid-template-columns: 1fr;
+}
+
+.posts a {
+	text-decoration: none;
+}
+
+.posts h3, 
+.posts p {
+	margin: 0;
+	padding: 5px 2px;
+}
+.card{ 
+	margin: 0;
+}
+
+.card img{
+    padding: 0;
+    margin: 0;
+	height: 100%;
+    min-height: 300px;
+	object-fit: cover;
+}
+
+/* ------- footer ------- */
+
+.colophon {
+	padding: 2em;
+	text-align: center;
+	border-top: 1px solid var(--text);
+}
+
+.colophon p {
+	padding: 0;
+	/* font-style: italic; */
+	font-size: 75%;
+}
+
+.confirm-box{
+    position: fixed;
+    bottom: 50%;
+	left:0;
+    height: 70px;
+	width: 100vw;
+    z-index: 2;
+    text-align: center;
+    background: var(--highlight);
+    color: var(--base);
+    font-size: 150%;
+	padding:0;
+	font-style: normal;
+    display: none;
+  }
+
+.confirm-box p {
+	font-style: normal;
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.site {
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 40em) {
+
+		.posts{
+			gap: 0.5rem;
+			grid-template-columns: repeat(2, 1fr);
+			/* grid-template-rows: repeat(3, 1fr); */
+			/* grid-template-areas: "one two"
+								 "thr two"
+								 "thr for"; */
+		}
+
+		/* .post:nth-child(1){
+			grid-area: one;
+		}
+
+		.post:nth-child(2){
+			grid-area: two;
+		}
+
+		.post:nth-child(3){
+			grid-area: thr;
+		}
+
+		.post:nth-child(4){
+			grid-area: for;
+		} */
+
+		.posts a {
+			padding: 0;
+		}
+
+		.card {
+            display: grid;
+			height:100%;
+        }
+
+        .card picture,
+        .caption {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items:left;
+            opacity: 0;
+            padding: 25px;
+            background: none;
+        }
+
+        .caption p {
+            max-width: 90%;
+        }
+
+        a:focus .caption,
+        a:hover .caption{
+            background-color: var(--base);
+            color: var(--text);
+            opacity: 0.7;
+        }
+	}
+
+	@media screen and (min-width: 50em) {
+
+		.site {
+			max-width: none;
+			display: grid;
+			grid-template-columns: auto 30em auto;
+		}
+
+    	.navigation {
+			 grid-column: 1/4;
+    	}
+
+		.masthead {
+			grid-column: 2/3;
+			margin: 0;
+			font-size: 100%;
+		}
+
+		.blog h2{
+			margin: 0;
+			font-size: 3em;
+		}
+
+		.main-area {
+			grid-column: 2/3;
+		}
+
+		.intro {
+			grid-column: 2/3;
+			margin: 0 0 3em 0;
+		}
+
+		.colophon {
+			grid-column: 2/3;
+		}
+	}
+
+	@media screen and (min-width: 65em) {
+
+		.site {
+			grid-template-columns: auto 40em auto;
+		}
+
+		.masthead {
+			font-size: 125%;
+		}
+	}
+
+}
+
+
+/* :root {
+  --content-width: 50ch;
+  --highlight: #46A7FB;
+  --dark-highlight: #235e92;
+} */
+
+
+/* body {
+  font-family: redacted_scriptregular;
+  font-size: 100%;
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 0;
+} */
