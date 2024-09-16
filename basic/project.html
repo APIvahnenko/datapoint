@@ -8,61 +8,138 @@
   <meta name="author" content="Anna Ivahnenko">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anna Ivahnenko</title>
-  <link rel="icon" href="logo.png">
-  <link rel="stylesheet" href="fonts/stylesheet.css" />
   <link rel="stylesheet" href="global-styles.css" />
-  <link rel="stylesheet" href="project.css" />
 
   <title>Anna Ivahnenko</title>
+  <link rel="icon" href="images/initials.png">
 
-  <nav>
-    <strong>Anna Ivahnenko</strong>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-  </nav>
+  <div class="site">
+    <nav class="navigation">
+      <strong><a class="home-name" href="index.html">Anna Ivahnenko</a></strong>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
 </head>
 
-<body>
-  <header class="header">
-    <h1 class="page-title">Dev Tools</h1>
-  </header>
-  <main class="main">
-    <div class="full-width highlight">
-      <h2>The Article Goes Here</h2>
-      <p>
-        Drops of rain could be heard hitting the pane, which made him feel
-        quite sad. "How about if I sleep a little bit longer and forget all
-        this nonsense", he thought, but that was something he was unable to do
-        because he was used to sleeping on his right, and in his present state
-        couldn't get into that position. However hard he threw himself onto
-        his right, he always rolled back to where he was.
-      </p>
-    </div>
-    <p>
-      He must have tried it a hundred times, shut his eyes so that he wouldn't
-      have to look at the floundering legs, and only stopped when he began to
-      feel a mild, dull pain there that he had never felt before. "Oh, God",
-      he thought, "what a strenuous career it is that I've chosen! Travelling
-      day in and day out.
-    </p>
-    <figure class="full-width">
-      <img src="blue-bg.svg" width="1920" height="1080" alt="Blue soft landscape" />
-    </figure>
-    <p>
-      Doing business like this takes much more effort than doing your own
-      business at home, and on top of that there's the curse of travelling,
-      worries about making train connections, bad and irregular food, contact
-      with different people all the time so that you can never get to know
-      anyone or become friendly with them. It can all go to Hell!
-    </p>
-  </main>
-  <footer>
-    <p>Hello World!</p>
-  </footer>
-</body>
+  <body class = "project">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
+    <div class = "switch">
+        <input type="checkbox" id="modecheckbox">
+        <label for="modecheckbox" class="dark-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+        </label>
+        <label for="modecheckbox" class="light-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+        </label>
+    </div>
+
+    <header id="content" class="header">
+      <h1 class="page-title">Dev Tools</h1>
+    </header>
+
+    <main class="article">
+      <div class="full-width highlight">
+        <h2>The Article Goes Here</h2>
+        <p>
+          Drops of rain could be heard hitting the pane, which made him feel
+          quite sad. "How about if I sleep a little bit longer and forget all
+          this nonsense", he thought, but that was something he was unable to do
+          because he was used to sleeping on his right, and in his present state
+          couldn't get into that position. However hard he threw himself onto
+          his right, he always rolled back to where he was.
+        </p>
+      </div>
+      <p>
+        He must have tried it a hundred times, shut his eyes so that he wouldn't
+        have to look at the floundering legs, and only stopped when he began to
+        feel a mild, dull pain there that he had never felt before. "Oh, God",
+        he thought, "what a strenuous career it is that I've chosen! Travelling
+        day in and day out.
+      </p>
+      <figure class="full-width">
+        <img src="images/blue-bg.svg" width="1920" height="1080" alt="Blue soft landscape" />
+      </figure>
+      <p>
+        Doing business like this takes much more effort than doing your own
+        business at home, and on top of that there's the curse of travelling,
+        worries about making train connections, bad and irregular food, contact
+        with different people all the time so that you can never get to know
+        anyone or become friendly with them. It can all go to Hell!
+      </p>
+
+      <div class="sources">
+        <h3>Sources</h3>
+        <ul>
+          <li> 
+            <p>data: <a href=""></a></p>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="share">
+        <a class="btn copy-url" title="copy URL">share</a>
+        <a class="btn" href="" title="view as pdf">view as pdf</a>
+      </div>
+    </main>
+    <footer class="colophon">
+      <div class="footer-info">
+          <a class="home-name" href="index.html">Anna Ivahnenko</a>
+          <ul class="contacts">
+              <li>
+                  <a href="https://github.com/APIvahnenko" target="_blank" title="GitHub">
+                      <svg version="1.0" alt="Github" xmlns="http://www.w3.org/2000/svg"
+                              width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                              preserveAspectRatio="xMidYMid meet">
+
+                              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                              fill="currentColor" stroke="none">
+                              <path d="M2325 5109 c-502 -51 -966 -238 -1358 -546 -107 -83 -362 -344 -444
+                              -453 -268 -359 -437 -765 -499 -1205 -25 -174 -25 -519 -1 -690 63 -436 236
+                              -852 500 -1204 93 -123 285 -321 412 -426 777 -639 1859 -765 2754 -319 259
+                              129 437 254 640 449 214 207 369 414 502 669 248 479 339 1021 260 1554 -63
+                              418 -232 820 -492 1169 -94 125 -366 397 -490 490 -352 263 -748 430 -1172
+                              494 -153 23 -473 33 -612 18z m425 -1124 c436 -59 812 -306 1040 -681 139
+                              -228 204 -465 204 -744 0 -247 -47 -442 -159 -658 -105 -203 -261 -383 -440
+                              -511 -94 -67 -307 -176 -363 -187 -59 -11 -60 -8 -64 259 -3 224 -5 246 -27
+                              300 -12 32 -38 78 -57 102 l-34 45 28 6 c168 36 329 115 421 205 224 221 254
+                              596 69 852 l-35 47 15 68 c16 76 11 164 -15 256 l-16 59 -63 -6 c-76 -7 -200
+                              -54 -272 -103 l-54 -36 -86 19 c-122 25 -440 26 -560 0 l-83 -18 -74 47 c-91
+                              56 -199 94 -270 94 l-53 0 -16 -47 c-24 -70 -31 -181 -17 -265 l13 -73 -46
+                              -68 c-25 -38 -57 -104 -72 -150 -23 -70 -27 -99 -28 -202 0 -203 52 -335 183
+                              -466 107 -106 215 -161 409 -209 l43 -11 -36 -42 c-19 -22 -45 -67 -56 -98
+                              l-21 -58 -55 -7 c-140 -17 -223 16 -297 120 -92 130 -185 190 -264 170 -55
+                              -13 -48 -36 33 -97 70 -52 80 -66 130 -182 33 -77 82 -126 159 -161 52 -24 78
+                              -28 174 -32 l112 -5 0 -147 c0 -175 -3 -181 -78 -161 -25 6 -89 33 -142 60
+                              -522 259 -830 775 -807 1351 23 545 338 1015 839 1250 99 46 255 94 358 109
+                              41 6 86 13 100 15 62 9 234 4 330 -9z"/>
+                              </g>
+                      </svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://www.linkedin.com/in/anna-ivahnenko-645223a5/" target="_blank" title="LinkedIn">
+                      <svg alt="LinkedIn" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                          <path d="M 9.999 0.013 C 4.484 0.013 0.011 4.483 0.011 9.997 C 0.011 15.511 4.484 19.979 9.999 19.979 C 15.516 19.979 19.988 15.511 19.988 9.997 C 19.988 4.483 15.516 0.013 9.999 0.013 Z M 7.555 14.134 L 5.532 14.134 L 5.532 7.629 L 7.555 7.629 L 7.555 14.134 Z M 6.531 6.83 C 5.892 6.83 5.479 6.377 5.479 5.818 C 5.479 5.247 5.905 4.808 6.556 4.808 C 7.209 4.808 7.609 5.247 7.621 5.818 C 7.621 6.377 7.209 6.83 6.531 6.83 Z M 14.942 14.134 L 12.92 14.134 L 12.92 10.529 C 12.92 9.69 12.626 9.121 11.894 9.121 C 11.335 9.121 11.004 9.506 10.858 9.878 C 10.803 10.009 10.79 10.196 10.79 10.383 L 10.79 14.133 L 8.766 14.133 L 8.766 9.703 C 8.766 8.891 8.74 8.212 8.713 7.628 L 10.47 7.628 L 10.563 8.531 L 10.603 8.531 C 10.87 8.107 11.522 7.481 12.613 7.481 C 13.945 7.481 14.942 8.372 14.942 10.287 L 14.942 14.134 Z"/>
+                        </svg>
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+      <a id="copyText" class="copy-link email" title="copy email address">anna.ivakh@gmail.com</a>
+
+      <div id='copy-confirm' class='confirm-box'>
+          <p>Email Copied! 🙌</p>
+      </div>
+
+      <script src="/copy-email.js"></script>
+      <p>© 2024 Anna Ivahnenko · made with ♥ by a human</p>
+      
+  </footer>
+
+  </div> <!-- site -->
+</body>
 </html>

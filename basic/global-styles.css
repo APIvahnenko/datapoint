@@ -91,14 +91,6 @@ p {
 	color: var(--highlight-text); 
 }
 
-small {
-	font-size: 75%;
-}
-
-big {
-	font-size: 125%;
-}
-
 img {
 	width: 100%;
 	height: auto;
@@ -115,7 +107,6 @@ a:hover,
 a:focus {
 	color: var(--highlight);
 }
-
 
 /*--------------------------------------------------------------
 General styling
@@ -144,6 +135,7 @@ label {
 body:has(#modecheckbox:checked){
 	--base: #26334f;
 	--text: floralwhite;
+	
 }
 
 .light-switch{
@@ -159,7 +151,7 @@ body:has(#modecheckbox:checked){
 }
 
 /* ----- navigation ----- */
-/* 
+
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -168,7 +160,11 @@ nav {
 	height: 100px;
 }
 
-#home {
+.home-name{
+	text-decoration: none;
+}
+
+#home, #cv {
 	justify-content: flex-end;
 }
   
@@ -177,19 +173,6 @@ nav li {
 	float: left;
 	padding: 0 15px;
  }
-  
-nav li a {
-	display: block;
-	color: var(--highlight);
-	text-decoration: none;
-}
-  
-nav li a:hover,
-nav li .active {
-	text-decoration: underline 2px;
-	color: var(--dark-highlight);
-} */
-
 /* ------- intro ------- */
 
 .masthead{
@@ -225,6 +208,8 @@ nav li .active {
 }
 .card{ 
 	margin: 0;
+	display: grid;
+	grid-template-columns: subgrid;
 }
 
 .card img{
@@ -234,6 +219,157 @@ nav li .active {
     min-height: 300px;
 	object-fit: cover;
 }
+
+/* ----- project ----- */
+
+.project .header .page-title{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2rem;
+	max-width: calc(var(--content-width) - 4rem);
+  }
+  
+.project figure {
+	margin: 0;
+}
+
+.project .full-width img {
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+}
+
+.project main >* {
+	padding: 2rem;
+}
+
+.project .highlight {
+	background-color: var(--highlight);
+	color: var(--text);
+}
+
+/* ------- sources ------- */
+.project .sources h3 {
+	padding: 0;
+	margin: -20px 0;
+}
+
+.project .sources >*{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* ------- share ------- */
+
+.share .btn{
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 5px;
+	box-shadow: -5px 5px 9px rgba(0,0,0,0.332);
+}
+
+.share .btn:hover{
+	padding: 9px;
+	border: 2px solid var(--highlight);
+}
+
+/* ------- cv ------- */
+
+.cv-header {
+	padding: 0 2rem;
+}
+
+.cv {
+	padding: 2rem;
+}
+
+.cv-header h1 {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+.cv h2 {
+	font-size: 1.25em;
+	opacity:0.5;
+
+}
+
+.cv >* {
+	margin: 0;
+	padding: 0;
+}
+
+.cv li >* {
+	margin: 0;
+	padding: 0;
+}
+
+.cv .description {
+	margin-bottom: 40px;
+}
+
+.cv-update{
+	font-size: 75%;
+	padding-bottom: 10px;
+	opacity:0.5;
+}
+
+.cv-section ul {
+	list-style-type: none;
+	padding:0;
+}
+
+.cv .role{
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.cv .place{
+	font-size: 1em;
+}
+
+.cv .date{
+	font-style: italic;
+	font-size: 75%;
+	opacity: 0.5;
+	margin-bottom: 10px;
+}
+
+@supports (writing-mode:sideways-lr){
+	.cv h2{
+		writing-mode:sideways-lr;
+		text-align: right;
+		margin:5px 30px 0 -5px;
+	}
+
+	.cv-section{
+		display: flex;
+	}
+
+	.cv-section >* {
+		margin:0;
+	}
+}
+
+
+/* @supports (grid-area: auto) {
+	.cv{
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.cv .cv-section{
+		grid-column: span 2;
+	}
+
+	.cv li{
+		display: grid;
+		grid-template-columns:subgrid;
+
+	}
+} */
 
 /* ------- footer ------- */
 
@@ -245,19 +381,19 @@ nav li .active {
 
 .colophon p {
 	padding: 0;
-	/* font-style: italic; */
 	font-size: 75%;
 }
 
 .confirm-box{
     position: fixed;
-    bottom: 50%;
+    /* bottom: 50%; */
+	bottom: 0;
 	left:0;
     height: 70px;
 	width: 100vw;
     z-index: 2;
     text-align: center;
-    background: var(--highlight);
+    background: var(--text);
     color: var(--base);
     font-size: 150%;
 	padding:0;
@@ -268,6 +404,35 @@ nav li .active {
 .confirm-box p {
 	font-style: normal;
 	padding: 0;
+}
+
+
+.colophon .contacts{
+	list-style-type: none;
+	padding: 0;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+}
+
+.colophon .contacts svg{
+	width: 38px;
+    height: auto;
+	display: inline-block;
+    margin-right: 8px;
+	color: var(--text);
+}
+
+.colophon .contacts svg:hover{
+	opacity: 0.7;
+}
+
+@media screen and (min-width: 30em) {
+	.footer-info{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -317,8 +482,7 @@ CSS Grid layout for modern browsers:
 		}
 
 		.card {
-            display: grid;
-			height:100%;
+			height: 100%;
         }
 
         .card picture,
@@ -381,6 +545,18 @@ CSS Grid layout for modern browsers:
 			margin: 0 0 3em 0;
 		}
 
+		.project .header{
+			grid-column: 2/3;
+		}
+
+		.project .article{
+			grid-column: 2/3;
+		}
+
+		.cv{
+			grid-column: 2/3;
+		}
+
 		.colophon {
 			grid-column: 2/3;
 		}
@@ -398,19 +574,3 @@ CSS Grid layout for modern browsers:
 	}
 
 }
-
-
-/* :root {
-  --content-width: 50ch;
-  --highlight: #46A7FB;
-  --dark-highlight: #235e92;
-} */
-
-
-/* body {
-  font-family: redacted_scriptregular;
-  font-size: 100%;
-  font-size: 30px;
-  line-height: 1.3;
-  margin: 0;
-} */
