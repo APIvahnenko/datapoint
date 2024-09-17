@@ -69,6 +69,18 @@ body {
 	color: var(--text);
 }
 
+body:not(.dark-mode) {
+    --base: floralwhite;
+    --text: #26334f;
+    --switch-image: url(../images/moon.svg);
+}
+
+.dark-mode {
+    --base: #26334f;
+    --text: floralwhite;
+    --switch-image: url(../images/sun.svg);
+}
+
 h1{
 	font-size: 4em; 
 }
@@ -114,40 +126,26 @@ General styling
 
 /* ------- light/dark mode ------- */
 
-.switch{
+
+.light-switch-btn {
+    position: fixed;
+	padding: 0.5em;
+	bottom: 0;
+	right: 10px;
+	cursor: pointer;
+    background-color: var(--base);
+    border: none;
+	border-radius: 10px 10px 0 0;
 	z-index: 1;
 }
 
-#modecheckbox{
-	display: none;
-	/* border-radius: 3px; */
-}
-
-label {
-	position: fixed;
-	padding: 0.5em;
-	bottom: 0;
-	right: 0;
-	background-color: var(--base);
-	border-radius: 10px;
-}
-
-body:has(#modecheckbox:checked){
-	--base: #26334f;
-	--text: floralwhite;
-	
-}
-
-.light-switch{
-	display: none;
-}
-
-#modecheckbox:checked ~ .dark-switch{
-	display: none;
-}
-
-#modecheckbox:checked ~ .light-switch{
-	display: block;
+.switch-image {
+    width: 27px;
+    height: 27px;
+    margin: 10px auto;
+    background-image: var(--switch-image);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* ----- navigation ----- */
