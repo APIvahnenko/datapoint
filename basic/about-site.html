@@ -15,10 +15,10 @@
 
   <div class="site">
     <nav class="navigation">
-      <strong><a class="home-name" href="index.html">Anna Ivahnenko</a></strong>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
+        <strong><a class="home-name" href="index.html">Data Point</a></strong>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
     </nav>
 
 </head>
@@ -35,43 +35,56 @@
     </header>
 
     <main class="article">
+        <!-- https://arne.me/colophon -->
+        <!-- This website was first published on June 19th 2021 near Frankfurt, Germany. It’s developed on a 2021 MacBook Pro with a custom Rust static site generator and hosted on Netlify. The code is hosted on GitHub.
+
+        The fonts used are Rebond Grotesque and Pragmata Pro. The logo was made by Ekaterina Kapranova.
+
+        Testing was conducted in the latest versions of Edge, Chrome, Firefox, and Safari. Any issue you encounter on this website can be submitted as GitHub issues.
+
+        A sitemap is available and there are RSS feeds for the blog, the weekly, and library.
+
+        This site is using the Axiom integration for Netlify for request logs and server-side analytics.
+
+        All of the code and content on this site is written by a human. -->
+
+        <!-- https://lukasmalkmus.com/colophon/ -->
+        <!-- Although having existed for years with different content and styling, this website was first published in its current form on November 3rd 2022 near Frankfurt, Germany.
+
+        It’s developed on a 2021 MacBook Pro with the static site generator Zola. The code is hosted on GitHub.
+
+        On each push a GitHub Actions Workflow builds the site using Zola and deploys the resulting files to a GitHub Page served using a domain name provided by Amazon Web Services.
+
+        The Mona Sans typeface by GitHub is used to style text.
+
+        The website is checked for performance and accessibility issues using Google Lighthouse.
+
+        A sitemap is available. -->
+
+
+        <p>This site was written using HTML, CSS and JavaScript. It uses a custom Rust static site generator and is hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. On each push a <a href="https://github.com/features/actions" target="_blank">GitHub Actions Workflow</a> builds the site using Zola and deploys the resulting files to a GitHub Page served using a domain name provided by <a href="https://aws.amazon.com/" target="_blank">Amazon Web Services</a>.</p>
+
+        <!-- <p>custom Rust static site generator and hosted on Netlify.</p>
+        <p>static site generator <a href="https://www.getzola.org/">Zola</a>.</p> -->
+
+        <p>Performance testing was conducted in the latest versions of Chrome, Firefox, and Safari (mobile and desktop) browsers.</p>
+
+        <p>The fonts used are Halvatica and Serif.</p>
         
-        <p>Although having existed for years with different content and styling, this website was first published in its current form on November 3rd 2022 near Frankfurt, Germany.</p>
+        <p>This site is using the <a href="https://axiom.co/">Axiom</a> for request logs and server-side analytics.</p>
 
-        <p>It’s developed on a 2021 MacBook Pro with the static site generator Zola. The code is hosted on GitHub.</p>
+        <p>A <a>sitemap</a> is available and there is an <a href="">RSS</a> feed for new posts.</p>
 
-        <p>On each push a GitHub Actions Workflow builds the site using Zola and deploys the resulting files to a GitHub Page served using a domain name provided by Amazon Web Services.</p>
+        <h3>Accessibility</h3>
+        <p>This website is regularly checked for performance and accessibility issues using <a href="https://developer.chrome.com/docs/lighthouse/" target="_blank">Google Lighthouse</a>. This site follows <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a> to AA standard. Screen reader ease of use is checked using <a href="https://www.apple.com/accessibility/vision/" target="_blank">Voice Over</a> and audited using <a href="https://wave.webaim.org/" target="_blank">WAVE</a>.</p>
 
-        <p> This website was first published on June 19th 2021 near Frankfurt, Germany. It’s developed on a 2021 MacBook Pro with a custom Rust static site generator and hosted on Netlify. The code is hosted on GitHub.</p>
+        <!-- This site aims to conform to level AA compliance for the Web Content Accessibility Guidelines (WCAG) 2.2.
 
-        ---
-        
-        <p>The Mona Sans typeface by GitHub is used to style text.</p>
-        <p>The fonts used are Rebond Grotesque and Pragmata Pro.</p>
-        <p>The logo was made by Ekaterina Kapranova.</p>
+        It uses standards-compliant HTML and CSS and is tested in all major browsers (see Colophon). It’s regularly checked for screen reader ease of use using Voice Over and audited using WAVE.
 
-        ---
-        
-        <p>The website is checked for performance and accessibility issues using Google Lighthouse.</p>
-        <p>Testing was conducted in the latest versions of Edge, Chrome, Firefox, and Safari. Any issue you encounter on this website can be submitted as GitHub issues.</p>
-        
-        ---
-        
-        <p>This site is using the Axiom integration for Netlify for request logs and server-side analytics.</p>
+        If you discover an accessibility problem, please open an issue or send me an email. I take these very seriously and will try my best to fix them as soon as possible. -->
 
-        <p>A sitemap is available.</p>
-        <p>A sitemap is available and there are RSS feeds for the blog, the weekly, and library.</p>
-
-        <p>All of the code and content on this site is written by a human.</p>
-
-        ---
-        <h3>Accessbility</h3>
-
-        <p>This site aims to conform to level AA compliance for the Web Content Accessibility Guidelines (WCAG) 2.2.</p>
-
-        <p>It uses standards-compliant HTML and CSS and is tested in all major browsers (see Colophon). It’s regularly checked for screen reader ease of use using Voice Over and audited using WAVE.</p>
-
-        <p>If you discover an accessibility problem, please open an issue or send me an email. I take these very seriously and will try my best to fix them as soon as possible.</p>
+        <p>If you discover an accessibility problem or any other issue, please open a <a href="" target="_blank">git issue</a> or send me an <a id="copyText" class="copy-link email" title="copy email address">email</a>, I'll try to fix any issues as soon possible.</p>
 
     </main>
     <footer class="colophon">
@@ -133,7 +146,7 @@
           <p>Email Copied! 🙌</p>
       </div>
 
-      <script src="/copy-email.js"></script>
+      <script src="./js/copy-email.js"></script>
       <p>© 2024 · made with ♥ by a human</p>
       
   </footer>

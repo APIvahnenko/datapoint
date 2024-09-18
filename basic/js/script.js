@@ -8,3 +8,7 @@ function darkmode() {
 function onload() {
     document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
 }
+
+function copyURL() {
+    navigator.clipboard.writeText(window.location.href)
+}
