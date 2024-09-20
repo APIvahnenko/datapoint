@@ -37,8 +37,8 @@ Typography
 --------------------------------------------------------------*/
   
 :root {
-	--base: floralwhite;
-	--text: #26334f;
+	--light: floralwhite;
+	--dark: #26334f;
 	--highlight: #46A7FB;
 	--highlight-select: gold;
 	--highlight-text: midnightblue;
@@ -144,7 +144,7 @@ General styling
 
 .switch-image {
     width: 27px;
-    height: 27px;
+    height: 25px;
     margin: 10px auto;
     background-image: var(--switch-image);
     background-size: cover;
@@ -179,21 +179,44 @@ nav li {
 
 .masthead{
 	font-size: 75%;
-	padding: 3rem var(--site-border);
+	padding: 4rem var(--site-border) 1rem;
+}
+
+.parallax{
+	display:none
+}
+
+@supports (grid-area: auto) {
+
+	.masthead{
+		display: grid;
+		justify-items: center;
+		grid-template-areas: "point" "title";
+	}
+	
+	.parallax{
+		display:inline;
+		max-width: 100px;
+		max-height: 100px;
+		grid-area: point;
+	}
+	
+	.headers{
+		padding: 1rem 0;
+		grid-area: title;
+	}
+
+	@media screen and (min-width: 40em) {
+		.masthead{
+			grid-template-areas: "title point" ;
+			justify-items: start;
+			align-items: center;
+		}
+	}
 }
 
 .intro {
 	padding: var(--site-border);
-}
-
-/* ------- parallax ------- */
-
-.parallax >* {
-	z-index: -1;
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: none;
 }
 
 /* ------- stories ------- */
@@ -260,6 +283,7 @@ nav li {
 
 		position: relative;
 		background: var(--border-color);
+		color: var(--dark);
 		max-width: 95%;
 
 		&.subtitle {
@@ -453,26 +477,18 @@ nav li {
 
 .confirm-box{
     position: fixed;
-    /* bottom: 50%; */
 	bottom: 0;
 	left:0;
-    height: 70px;
 	width: 100vw;
     z-index: 2;
     text-align: center;
     background: var(--text);
     color: var(--base);
     font-size: 150%;
-	padding:0;
+	padding: 1rem 0;
 	font-style: normal;
     display: none;
   }
-
-.confirm-box p {
-	font-style: normal;
-	padding: 0;
-}
-
 
 .colophon .contacts{
 	list-style-type: none;
@@ -560,10 +576,6 @@ CSS Grid layout for modern browsers:
 			grid-column: 2/3;
 			margin: 0;
 			font-size: 100%;
-		}
-
-		.parallax{
-			grid-column: 1/4;
 		}
 
 		/* .blog h2{

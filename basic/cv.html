@@ -30,7 +30,7 @@
 
     <header id="content" class="cv-header">
         <h1 class="cv-title">Anna Ivahnenko</h1>
-        <p><strong>Using data to formulate and answer questions about the things that drive the world.</strong> See my latest projects <a href="index.html">here</a> or, check out my code on <a href="https://github.com/APIvahnenko" target="_blank" title="GitHub">GitHub</a>. You can reach me though <a href="https://www.linkedin.com/in/anna-ivahnenko-645223a5/" target="_blank" title="LinkedIn">LinkedIn</a> or <a id="copyText" class="copy-link email" title="copy email address">email</a>.</p>
+        <p><strong>Using data to formulate and answer questions about the things that drive the world.</strong> See my latest projects <a href="index.html">here</a> or, check out my code on <a href="https://github.com/APIvahnenko" target="_blank" title="GitHub">GitHub</a>. You can reach me though <a href="https://www.linkedin.com/in/anna-ivahnenko-645223a5/" target="_blank" title="LinkedIn">LinkedIn</a> or <a id="copyText" class="copy-link email" title="copy email address" onclick="copyEmail()">email</a>.</p>
     </header>
 
     <main class="cv">
@@ -41,25 +41,19 @@
                     <h3 class = "role">Data Scientist</h3>
                     <h4 class="place">Stagwell · Assembly Global</h4>
                     <p class="date">2020-2023</p>
-                    <p class="description">Worked with a global client base, addressing diverse data challenges: 
-                        Conducted Causal Impact & AB testing using R and Python analysis
-                        Optimised results in diminishing returns analysis by implementing dynamic time-warping
-                        Applied custom R ensemble method package for demand forecasting
-                        Collaborated on Marketing Mixed Models using the Python Robyn library - providing Adstock and channel importance
-                        Automated client-specific Big Query reporting and website flow analysis
-                        Led data cleaning and feature engineering for forecasting and MMM projects using SQL and R
-                        </p>
+                    <p class="description">Worked with a number of global clients (Nike, MyStays Hotels, Ace Hardware), addressing diverse data challenges: 
+                        Causal Impact, AB testing, Diminishing Returns analysis, Dynamic Time-Warping for Demand Forecasting, Adstock analysis, Channel Importance, Big Query automation and Website Flow analysis, Feature Engineering for forecasting and MMM project.
+                    </p>
                 </li>
                 <li>
                     <h3 class = "role">Data Scientist</h3>
                     <h4 class="place">WPP · GTB</h4>
                     <p class="date">2019</p>
-                    <p class="description">As a part of the Marketing Analytics team, analysed the Ford EU website clickstream, sales, and media budget data: 
-                        Applied advanced neural networks for user behaviour analysis, forecast of key sites and visitor segmentation, media campaigns analysis, and optimization of customer journey funnel for multiple markets
+                    <p class="description">Worked on marketing analytics for Ford EU website clickstream, sales, and media budget data: Forecast of KPIs, Visitor Segmentation analysis, Media Campaigns analysis, and Optimization of customer journey funnel for multiple markets.
                         Established an ETL process for merging, transforming and processing big data to score as well as compare omni-channel campaigns
                         Collaborated with multiple marketing teams to set KPIs against client feedback interpreting client specifications and providing feedback
                         Trained new data analysts on tools, technologies, and presentations
-                        </p>
+                    </p>
                 </li>
                 <li>
                     <h3 class = "role">Data Analyst</h3>
@@ -70,7 +64,7 @@
                         Working in a team to build an attribution model that links media channels, markets and visitor actions to improve performance
                         Provide insight into visitor journeys, producing insights for campaigns and site optimisation 
                         Produced and presented deep dive post-campaign analytics, quarterly and weekly business reviews, aiding clients in future campaign planning
-                        </p>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -99,7 +93,9 @@
                     I'm working on honing my skills in Data Science, learning new cloud technologies. Lates
                 </li>
                 <li>
-                    Download a full pdf version of my CV <a href="./files/cv.pdf" download="Anna Ivahnenko CV">here</a>.
+                    <aside>
+                        Download a full pdf version of my CV <a href="./files/cv.pdf" target="_blank" title="view as pdf" download="Anna Ivahnenko CV">here</a>.
+                    </aside>
                 </li>
             </ul>
         </div>
@@ -109,7 +105,7 @@
             <a class="home-name" href="index.html">Anna Ivahnenko</a>
             <ul class="contacts">
                 <li>
-                    <a id="copyText" class="copy-link email" title="copy email address">
+                    <a id="copyText" class="copy-link email" title="copy email address" onclick="copyEmail()">
                       <svg fill="currentColor" alt="Email" width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zM6.231 7h7.52c.399 0 .193.512-.024.643-.217.13-3.22 1.947-3.333 2.014s-.257.1-.403.1a.793.793 0 0 1-.402-.1L6.255 7.643C6.038 7.512 5.833 7 6.231 7zM14 12.5c0 .21-.252.5-.444.5H6.444C6.252 13 6 12.71 6 12.5V8.853c0-.092-.002-.211.172-.11l3.417 2.015a.69.69 0 0 0 .402.1c.146 0 .252-.011.403-.1l3.434-2.014c.174-.102.172.018.172.11V12.5z"/></svg>
                   </a>
                 </li>
@@ -154,7 +150,7 @@
             </ul>
         </div>
 
-        <a id="copyText" class="copy-link email" title="copy email address">anna.ivakh@gmail.com</a>
+        <a title="copy email address" onclick="copyEmail()">anna.ivakh@gmail.com</a>
   
         <div id='copy-confirm' class='confirm-box'>
             <p>Email Copied! 🙌</p>
