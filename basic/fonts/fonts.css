@@ -1,0 +1,35 @@
+/* Headings */
+/* https://fonts.google.com/specimen/Cormorant+Garamond */
+
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("CormorantGaramond-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond Light";
+  src: url("CormorantGaramond-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond Bold";
+  src: url("CormorantGaramond-SemiBold.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* Text */
+/* https://fonts.google.com/specimen/Quattrocento+Sans */
+
+@font-face {
+  font-family: "Quattrocento Sans";
+  src: url("QuattrocentoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
