@@ -39,7 +39,6 @@ Typography
 :root {
 	--light: floralwhite;
 	--dark: #26334f;
-	--highlight: #46A7FB;
 	--highlight-select: gold;
 	--highlight-text: midnightblue;
 	--site-border: 2rem;
@@ -56,7 +55,7 @@ body>* {
  
 body {
 	margin: 0;
-	font-family:'Helvetica', 'Arial', sans-serif;
+	font-family: 'Quattrocento Sans', 'Helvetica', 'Arial', sans-serif;
 	font-size: clamp(0.95rem, 0.6522rem + 1.391vw, 1.3rem);
 	line-height: 1.5;
 	word-wrap: break-word;
@@ -68,7 +67,7 @@ body {
 body:not(.dark-mode) {
     --base: floralwhite;
     --text: #26334f;
-	--highlight: #46A7FB;
+	--highlight: #46a6fbd9;
 	--border-color: #78ace3;
     --switch-image: url(../images/moon.svg);
 }
@@ -86,12 +85,12 @@ body:not(.dark-mode) {
 }
 
 :where(h1, h2, h3){
-	font-family: "Cormorant Garamond", serif;
+	font-family: "Cormorant Garamond", "Georgia", serif; 
 }
 
 p {
-	font-family: "Quattrocento Sans", system-ui;
-	font-weight: 300;
+	font-family: "Quattrocento Sans";
+	
 }
 
 h1{
@@ -106,6 +105,7 @@ h2{
 
 p {
 	padding: 0.5em 0;
+	font-weight: 300;
 }
 
 ::-moz-selection { /* for Firefox */
@@ -125,15 +125,15 @@ img {
 
 a {
 	color: var(--text);
-	cursor: pointer;
-	padding: 2px;
 	text-decoration: underline;
-}
+	font-weight: 700;
+	cursor: pointer;
+  }
 
-a:hover,
-a:focus {
-	color: var(--highlight);
-}
+  a:hover,
+  a:focus {
+	  color: var(--highlight);
+  }
 
 /*--------------------------------------------------------------
 General styling
@@ -172,19 +172,28 @@ nav {
 	height: 100px;
 }
 
+nav li {
+	list-style-type: none;
+	float: left;
+	padding: 0 15px;
+	font-size: 1.1rem;
+ }
+
+
 .home-name{
 	text-decoration: none;
+	font-family: "Cormorant Garamond";
 }
 
 #home, #cv {
 	justify-content: flex-end;
 }
   
-nav li {
-	list-style-type: none;
-	float: left;
-	padding: 0 15px;
- }
+@media screen and (max-width: 40em){
+	nav {
+		height: 50px;
+	}
+}
 
 /* ------- intro ------- */
 
@@ -215,6 +224,12 @@ nav li {
 	.headers{
 		padding: 1rem 0;
 		grid-area: title;
+	}
+
+	@media screen and (max-width: 40em){
+		.headers{
+			text-align: center;
+		}
 	}
 
 	@media screen and (min-width: 40em) {
@@ -338,6 +353,8 @@ nav li {
   }
   
 .project figure {
+	overflow: hidden;
+	padding: 0;
 	margin: 0;
 }
 
@@ -345,23 +362,20 @@ nav li {
 	width: 100%;
 	height: 600px;
 	object-fit: cover;
+	justify-content: center;
 }
 
-.project main >* {
+.project main>* {
 	padding: var(--site-border);
+}
+
+.project h3{
+	padding: 2rem 0 0.25rem;
 }
 
 .project .highlight {
 	background-color: var(--highlight);
 	color: var(--text);
-}
-
-.project p{
-	padding: 1rem var(--site-border);
-}
-
-.project h3{
-	padding: 2rem var(--site-border) 0.5rem;
 }
 
 .project .article {
@@ -371,13 +385,13 @@ nav li {
 /* ------- sources ------- */
 
 .project .sources h3 {
-	padding: 0;
+	padding: 3rem 0 0.25rem;
 	margin: -20px 0;
 }
 
 .project .sources >*{
 	list-style-type: none;
-	padding: 0;
+	padding: 0.5rem 0 2rem;
 	margin: 0;
 }
 
@@ -386,13 +400,14 @@ nav li {
 .share .btn{
 	padding: 10px;
 	text-decoration: none;
+	font-weight: 400;
 	border-radius: 5px;
-	box-shadow: -5px 5px 9px rgba(0,0,0,0.332);
+	box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px 0px;
 }
 
 .share .btn:hover{
 	padding: 9px;
-	border: 2px solid var(--highlight);
+	border: 1px solid var(--highlight);
 }
 
 /* ------- cv ------- */
@@ -406,19 +421,13 @@ nav li {
 }
 
 .cv-header h1 {
-	font-size: 1.5em;
-	font-weight: 300;
+	font-size: 1.8em;
+	/* font-weight: 300; */
 }
 
 .cv h2 {
 	font-size: 1.25em;
 	opacity:0.5;
-
-}
-
-.cv >* {
-	margin: 0;
-	padding: 0;
 }
 
 .cv li >* {
@@ -447,7 +456,7 @@ nav li {
 }
 
 .cv .place{
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 .cv .date{
@@ -455,6 +464,10 @@ nav li {
 	font-size: 75%;
 	opacity: 0.5;
 	margin-bottom: 10px;
+}
+
+.cv a{
+	font-weight: 400;
 }
 
 @supports (writing-mode:sideways-lr){
@@ -484,6 +497,11 @@ nav li {
 .colophon p {
 	padding: 0;
 	font-size: 75%;
+}
+
+.colophon a {
+	font-weight: 400;
+	cursor: pointer;
 }
 
 .confirm-box{
@@ -518,7 +536,8 @@ nav li {
 }
 
 .colophon .contacts svg:hover{
-	opacity: 0.7;
+	opacity: 0.9;
+	color: var(--highlight);
 }
 
 @media screen and (min-width: 30em) {
