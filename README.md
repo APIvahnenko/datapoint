@@ -13,9 +13,9 @@
 <p align="center">
 <a href="site_link">Visit Site</a>
 ·
-<a href="https://github.com/APIvahnenko/REPO/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+<a href="https://github.com/APIvahnenko/datapoint/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
 ·
-<a href="https://github.com/APIvahnenko/REPO/issues/new?labels=enhancement&template=feature-request---.md">Requests</a>
+<a href="https://github.com/APIvahnenko/datapoint/issues/new?labels=enhancement&template=feature-request---.md">Requests</a>
 </p>
 
 <!-- <p align="center">
