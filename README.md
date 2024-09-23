@@ -4,7 +4,7 @@
 
 <h1 align="center">
 <br>
-<a href=""><img src="../basic/images/dot-logo.png" alt="Logo" width="150"></a>
+<a href=""><img src="images/dot-logo.png" alt="Logo" width="150"></a>
 <br>Data Point</br>
 </h1>
 
