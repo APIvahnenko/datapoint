@@ -1,0 +1,150 @@
+/* ------- intro ------- */
+
+.masthead{
+	font-size: 75%;
+	padding: 4rem var(--site-border) 1rem;
+}
+
+.parallax{
+	display:none
+}
+
+@supports (grid-area: auto) {
+
+	.masthead{
+		display: grid;
+		justify-items: center;
+		grid-template-areas: "point" "title";
+	}
+	
+	.parallax{
+		display:inline;
+		max-width: 100px;
+		max-height: 100px;
+		grid-area: point;
+	}
+	
+	.headers{
+		padding: 1rem 0;
+		grid-area: title;
+	}
+
+	@media screen and (max-width: 40em){
+		.headers{
+			text-align: center;
+		}
+	}
+
+	@media screen and (min-width: 40em) {
+		.masthead{
+			grid-template-areas: "title point" ;
+			justify-items: start;
+			align-items: center;
+		}
+
+		.parallax {
+			justify-self: center;
+		}
+	}
+}
+
+.intro {
+	padding: var(--site-border);
+}
+
+/* ------- stories ------- */
+
+.blog {
+	padding: var(--site-border);
+	padding-top: 0;
+}
+
+.blog ul{
+	list-style-type: none;
+	padding:0;
+	margin: 0;
+
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%,250px),1fr));
+}
+
+.card{ 
+	margin: 0;
+	display: grid;
+	grid-template-columns: subgrid;
+}
+
+.card picture,
+.caption {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.link {
+	--border: 0.5rem;
+	--gap: clamp(1.2rem, calc(1rem + 0.1vw), 1.25rem);
+
+	display: grid;
+	grid-template-columns: subgrid;
+	align-content: end;
+	gap: var(--gap);
+
+	aspect-ratio: 1;
+	padding: var(--border);
+	line-height: 1;
+	text-decoration: none;
+
+	transition: all 0.25s;
+	background: var(--border-color);
+	
+	& img {
+		position:relative;
+		top: 50%;
+		left:50%;
+		translate: -50% -50%;
+		object-fit: cover;
+	}
+
+	&:hover,
+	&:focus {
+		--border: 1rem;
+		color: var(--text);
+	}
+
+	& span {
+
+		position: relative;
+		background: var(--border-color);
+		color: var(--dark);
+		max-width: 95%;
+
+		&.subtitle {
+		padding: 4px 4px;
+		font-size: 1.45rem;
+		line-height: 1.5;
+		}
+
+		&.title {
+		text-transform: uppercase;
+		padding: 12px 0 6px;
+		font-size: 1.25rem;
+		font-weight: 800;
+		letter-spacing: 2px;
+		line-height: 1.2;
+		}
+	}
+
+	&[href="/first"] {
+		--border-color: #a4bf8d;
+	}
+	&[href="/about"] {
+		--border-color: #b48ead;
+	}
+	&[href="/projects"] {
+		--border-color: #d18771;
+	}
+	&[href="/articles"] {
+		--border-color: #a4bf8d;
+	}
+}

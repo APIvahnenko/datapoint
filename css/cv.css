@@ -1,0 +1,75 @@
+/* ------- cv ------- */
+
+.cv-header {
+	padding: 0 var(--site-border);
+}
+
+.cv {
+	padding: var(--site-border);
+}
+
+.cv-header h1 {
+	font-size: 1.8em;
+	/* font-weight: 300; */
+}
+
+.cv h2 {
+	font-size: 1.25em;
+	opacity:0.5;
+}
+
+.cv li >* {
+	margin: 0;
+	padding: 0;
+}
+
+.cv .description {
+	margin-bottom: 40px;
+}
+
+.cv-update{
+	font-size: 75%;
+	padding-bottom: 10px;
+	opacity:0.5;
+}
+
+.cv-section ul {
+	list-style-type: none;
+	padding:0;
+}
+
+.cv .role{
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.cv .place{
+	font-size: 1.2em;
+}
+
+.cv .date{
+	font-style: italic;
+	font-size: 75%;
+	opacity: 0.5;
+	margin-bottom: 10px;
+}
+
+.cv a{
+	font-weight: 400;
+}
+
+@supports (writing-mode:sideways-lr){
+	.cv h2{
+		writing-mode:sideways-lr;
+		text-align: right;
+		margin:5px 30px 0 -5px;
+	}
+
+	.cv-section{
+		display: flex;
+	}
+
+	.cv-section >* {
+		margin:0;
+	}
+}

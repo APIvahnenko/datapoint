@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -84,7 +83,7 @@ body:not(.dark-mode) {
 	margin: 0;
 }
 
-:where(h1, h2, h3){
+:where(h1, h2, h3, h4){
 	font-family: "Cormorant Garamond", "Georgia", serif; 
 }
 
@@ -179,9 +178,8 @@ nav li {
 	font-size: 1.1rem;
  }
 
-.home-name{
+.home-name {
 	text-decoration: none;
-	font-family: "Cormorant Garamond";
 }
 
 #home, #cv {
@@ -191,318 +189,6 @@ nav li {
 @media screen and (max-width: 40em){
 	nav {
 		height: 50px;
-	}
-
-	nav >*{
-		margin: 0;
-		padding: 0;
-		align-items: baseline;
-	}
-
-	nav .home-name h3{
-		padding:0;
-	}
-}
-
-/* ------- intro ------- */
-
-.masthead{
-	font-size: 75%;
-	padding: 4rem var(--site-border) 1rem;
-}
-
-.parallax{
-	display:none
-}
-
-@supports (grid-area: auto) {
-
-	.masthead{
-		display: grid;
-		justify-items: center;
-		grid-template-areas: "point" "title";
-	}
-	
-	.parallax{
-		display:inline;
-		max-width: 100px;
-		max-height: 100px;
-		grid-area: point;
-	}
-	
-	.headers{
-		padding: 1rem 0;
-		grid-area: title;
-	}
-
-	@media screen and (max-width: 40em){
-		.headers{
-			text-align: center;
-		}
-	}
-
-	@media screen and (min-width: 40em) {
-		.masthead{
-			grid-template-areas: "title point" ;
-			justify-items: start;
-			align-items: center;
-		}
-	}
-}
-
-.intro {
-	padding: var(--site-border);
-}
-
-/* ------- stories ------- */
-
-.blog {
-	padding: var(--site-border);
-	padding-top: 0;
-}
-
-.blog ul{
-	list-style-type: none;
-	padding:0;
-	margin: 0;
-
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(min(100%,250px),1fr));
-}
-
-.card{ 
-	margin: 0;
-	display: grid;
-	grid-template-columns: subgrid;
-}
-
-.card picture,
-.caption {
-	grid-column: 1;
-	grid-row: 1;
-}
-
-.link {
-	--border: 0.5rem;
-	--gap: clamp(1.2rem, calc(1rem + 0.1vw), 1.25rem);
-
-	display: grid;
-	grid-template-columns: subgrid;
-	align-content: end;
-	gap: var(--gap);
-
-	aspect-ratio: 1;
-	padding: var(--border);
-	line-height: 1;
-	text-decoration: none;
-
-	transition: all 0.25s;
-	background: var(--border-color);
-	
-	& img {
-		position:relative;
-		top: 50%;
-		left:50%;
-		translate: -50% -50%;
-		object-fit: cover;
-	}
-
-	&:hover,
-	&:focus {
-		--border: 1rem;
-		color: var(--text);
-	}
-
-	& span {
-
-		position: relative;
-		background: var(--border-color);
-		color: var(--dark);
-		max-width: 95%;
-
-		&.subtitle {
-		padding: 4px 4px;
-		font-size: 1.45rem;
-		line-height: 1.5;
-		}
-
-		&.title {
-		text-transform: uppercase;
-		padding: 12px 0 6px;
-		font-size: 1.25rem;
-		font-weight: 800;
-		letter-spacing: 2px;
-		line-height: 1.2;
-		}
-	}
-
-	&[href="/first"] {
-		--border-color: #a4bf8d;
-	}
-	&[href="/about"] {
-		--border-color: #b48ead;
-	}
-	&[href="/projects"] {
-		--border-color: #d18771;
-	}
-	&[href="/articles"] {
-		--border-color: #ebca89;
-	}
-}
-
-/* ----- project ----- */
-
-.project .header .page-title{
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	padding: var(--site-border);
-	max-width: calc(var(--content-width) - 4rem);
-  }
-  
-.project figure {
-	overflow: hidden;
-	padding: 0;
-	margin: 0;
-}
-
-.project .full-width img {
-	width: 100%;
-	height: 600px;
-	object-fit: cover;
-	justify-content: center;
-}
-
-.project main>* {
-	padding: var(--site-border);
-}
-
-.project h3{
-	padding: 2rem 0 0.25rem;
-}
-
-.project .highlight {
-	background-color: var(--highlight);
-	color: var(--text);
-}
-
-.project .article {
-	padding-bottom: 3rem;
-}
-
-/* ------- sources ------- */
-
-.project .sources h3 {
-	padding: 3rem 0 0.25rem;
-	margin: -20px 0;
-}
-
-.project .sources >*{
-	list-style-type: none;
-	padding: 0.5rem 0 2rem;
-	margin: 0;
-}
-
-/* ------- about site ------- */
-
-.about-site p{ 
-	padding: 0.5rem var(--site-border) 2rem;
-}
-
-.about-site h3{ 
-	padding: 1rem var(--site-border) 0;
-	font-family: "Cormorant Garamond Bold";
-}
-
-/* ------- share ------- */
-
-.share .btn{
-	padding: 10px;
-	text-decoration: none;
-	font-weight: 400;
-	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px 0px;
-}
-
-.share .btn:hover{
-	padding: 9px;
-	border: 1px solid var(--highlight);
-}
-
-/* ------- cv ------- */
-
-.cv-header {
-	padding: 0 var(--site-border);
-}
-
-.cv {
-	padding: var(--site-border);
-}
-
-.cv-header h1 {
-	font-size: 1.8em;
-	/* font-weight: 300; */
-}
-
-.cv h2 {
-	font-size: 1.25em;
-	opacity:0.5;
-}
-
-.cv li >* {
-	margin: 0;
-	padding: 0;
-}
-
-.cv .description {
-	margin-bottom: 40px;
-}
-
-.cv-update{
-	font-size: 75%;
-	padding-bottom: 10px;
-	opacity:0.5;
-}
-
-.cv-section ul {
-	list-style-type: none;
-	padding:0;
-}
-
-.cv .role{
-	font-size: 1.2em;
-	font-weight: 500;
-}
-
-.cv .place{
-	font-size: 1.2em;
-}
-
-.cv .date{
-	font-style: italic;
-	font-size: 75%;
-	opacity: 0.5;
-	margin-bottom: 10px;
-}
-
-.cv a{
-	font-weight: 400;
-}
-
-@supports (writing-mode:sideways-lr){
-	.cv h2{
-		writing-mode:sideways-lr;
-		text-align: right;
-		margin:5px 30px 0 -5px;
-	}
-
-	.cv-section{
-		display: flex;
-	}
-
-	.cv-section >* {
-		margin:0;
 	}
 }
 
@@ -628,11 +314,6 @@ CSS Grid layout for modern browsers:
 			font-size: 100%;
 		}
 
-		/* .blog h2{
-			margin: 0;
-			font-size: 3em;
-		} */
-
 		.main-area {
 			grid-column: 2/3;
 		}
@@ -674,8 +355,7 @@ CSS Grid layout for modern browsers:
 		}
 
 		.masthead {
-			font-size: 125%;
+			font-size: 150%;
 		}
 	}
-
 }
