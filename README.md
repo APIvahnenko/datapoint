@@ -27,7 +27,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -55,7 +55,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- ROADMAP -->
+<!-- ROADMAP 
 
 ## Roadmap
 
@@ -64,7 +64,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 See the [open issues](https://github.com/APIvahnenko/datapoint/issues/new?labels=bug&template=bug-report---.md) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -80,6 +80,6 @@ Resources I found helpful and would like to give credit to:
 
 ---
 
-> [datapoint.me](https://apivahnenko.github.io/datapoint/) &nbsp;&middot;&nbsp;
+> [datapoint](https://apivahnenko.github.io/datapoint/) &nbsp;&middot;&nbsp;
 > GitHub: [@APIvahnenko](https://github.com/APIvahnenko) &nbsp;&middot;&nbsp;
 > Email: anna.ivahk@gmail.com
